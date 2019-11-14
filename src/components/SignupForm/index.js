@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import '../styles.css';
+import './styles.css';
 
 class SignupForm extends PureComponent {
     constructor(props) {
