@@ -21,32 +21,13 @@ class SignupForm extends PureComponent {
     handleInput = (event) => {
 
         // hide error message if value is not empty
-        if (event.target.value) {
-            if(event.target.name === 'username') {
-                this.setState({
-                    usernameEmpty: false
-                })
-            }
-            if(event.target.name === 'password') {
-                this.setState({
-                    passwordEmpty: false
-                })
-            }
-        }
+        if (event.target.value) 
+            this.displayErrorMessage(event.target.name, false);
+        
 
         // if everything from input is deleted, to display the error message
-        else {
-            if(event.target.name === 'username') {
-                this.setState({
-                    usernameEmpty: true
-                })
-            }
-            if(event.target.name === 'password') {
-                this.setState({
-                    passwordEmpty: true
-                })
-            }
-        }
+        else 
+             this.displayErrorMessage(event.target.name, true);
         
         let formData = Object.assign({}, this.state.formData);
         formData[event.target.name] = event.target.value;
@@ -118,6 +99,19 @@ class SignupForm extends PureComponent {
 
     componentWillUnmount() {
         clearInterval(this.interval);
+    }
+
+    displayErrorMessage(name, value) {
+        if(name === 'username') {
+            this.setState({
+                usernameEmpty: value
+            })
+        }
+        if(name === 'password') {
+            this.setState({
+                passwordEmpty: value
+            })
+        }
     }
 
   }
