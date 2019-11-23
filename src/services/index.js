@@ -6,16 +6,10 @@
       age: 24
     },
     {
-      id: 2,
-      username: 'jojo007',
-      email: 'jojo007@gmail.com' ,
-      age: 26
-    },
-    {
       id: 3,
       username: 'michaela456',
       email: 'mikaela456@gmail.com' ,
-      age: 28
+      age: 26
     },
     {
       id: 4,

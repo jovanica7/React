@@ -107,9 +107,9 @@ render() {
       <h1 onClick={ this.unselectItem } style={{ cursor: 'pointer', color: 'orange' }}>Users:</h1>
       { this.renderUserList() }
       <div style={{ display: 'flex', flex: 1, marginTop: '20px', flexDirection: 'column' }}>
-        <input value={ usernameToAdd } placeholder='Username' onChange={ this.handleInputChange('usernameToAdd') } required />
-        <input value={ emailToAdd } placeholder='Email' onChange={ this.handleInputChange('emailToAdd') } required />
-        <input value={ ageToAdd } placeholder='Age' onChange={ this.handleInputChange('ageToAdd') } required />
+        <input type='text' value={ usernameToAdd } placeholder='Username' onChange={ this.handleInputChange('usernameToAdd') } />
+        <input type='text' value={ emailToAdd } placeholder='Email' onChange={ this.handleInputChange('emailToAdd') } />
+        <input type='number' value={ ageToAdd } placeholder='Age' onChange={ this.handleInputChange('ageToAdd') } />
         <button onClick={ this.state.selected ? this.editUser : this.addNewUser }>{ this.state.selected ? 'Edit' : 'Add new'}  user</button>
         <button disabled={ !this.state.selected } onClick={ this.state.selected ? this.deleteUser : null }>Delete user</button> 
       </div>
