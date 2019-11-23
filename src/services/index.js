@@ -2,19 +2,19 @@
     {
       id: 1,
       username: 'danijela123',
-      email: 'danijela123@gmail.com' ,
+      email: 'danijela123@gmail.com',
       age: 24
     },
     {
       id: 3,
       username: 'michaela456',
-      email: 'mikaela456@gmail.com' ,
+      email: 'mikaela456@gmail.com',
       age: 26
     },
     {
       id: 4,
       username: 'beckyg414',
-      email: 'beckyg4146@gmail.com' ,
+      email: 'beckyg4146@gmail.com',
       age: 30
     }
   ]
